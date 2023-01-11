@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Restaurants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        /*basic css reset*/
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 10px;
+            /*font family*/
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url('homepage images/Background-body.png');
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+
+        }
+
+        /*header*/
+        img.logo {
+            border-radius: 5%;
+            background-color: rgb(237, 211, 130);
+        }
+
+        .header-section {
+            background-color: teal;
+            width: 100vw;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 15px;
+            padding-left: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar a.navlink {
+            width: 20%;
+            border-radius: 8px;
+            background-color: teal;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .navbar a.navlink:hover {
+            background-color: rgb(237, 211, 130);
+            color: black;
+            transition: 0.1s ease-in;
+            cursor: pointer;
+        }
+        a#navlink1{
+            background-color: rgb(237, 211, 130);
+        }
+
+
+        form.header-form input[type=text] {
+            padding: 7px;
+            font-size: 15px;
+            border: 3px solid #282A35;
+            border-radius: 10px;
+            width: 50%;
+            background: white;
+            outline: 0;
+
+        }
+
+
+        form.header-form button {
+            border-radius: 10px;
+            width: 35px;
+            padding: 7px;
+            background: white;
+            color: white;
+            font-size: 10px;
+            border: 3px solid #282A35;
+            cursor: pointer;
+
+        }
+
+        form.header-form button:hover {
+            background-color: rgb(237, 211, 130);
+        }
+
+        /*header*/
+        .restaurants_page_box_list1 {
+            background: #fff;
+            box-shadow: 1px 2px 3px 9px #0000002e;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 0px 0px 50px;
+            padding: 10px 10px;
+            width: 70%;
+            position: relative;
+            left: 200px;
+            top: 13px;
+        }
+
+        .restaurants_page_box_list1:hover {
+            background-color: rgb(233, 196, 106);
+            box-shadow: 1px 2px 3px 9px teal;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .image1 {
+            max-width: 20%;
+            border-radius: 3%;
+
+        }
+
+
+
+        .text {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+
+
+
+
+        /*footer*/
+        section.footer {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background-color: teal;
+        }
+
+        div.footer-div {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: auto auto auto auto;
+            gap: 60px;
+        }
+
+        fieldset.info p {
+            font-size: 1rem;
+        }
+
+        fieldset.info p li {
+            font-size: 5px;
+        }
+
+        .contact-footer {
+            font-size: x-large;
+            font-style: normal;
+            color: whitesmoke;
+            margin-bottom: 2;
+            text-decoration: underline;
+            color: white;
+            text-transform: uppercase;
+
+
+        }
+
+        .copywrite {
+            font-size: large;
+            color: whitesmoke;
+        }
+
+        .social-media {
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media:hover {
+            background-color: rgb(233, 196, 106);
+            transition: 0.1s ease-in;
+            cursor: pointer;
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media2 {
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media2:hover {
+            background-color: rgb(233, 196, 106);
+            transition: 0.1s ease-in;
+            cursor: pointer;
+            border-radius: 60%;
+            padding: 5px;
+        }
+
+        /*Footer*/
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="header-section">
+            <div class="navbar">
+                <a href="/Landing-page.html"><img src="Icons/TAST.svg" class="logo" alt="logo" width="50px"></a>
+                <a class="navlink" href="/Landing-page.html">Home</a>
+                <a class="navlink" id="navlink1" href="#">All Restaurants</a>
+                <form class="header-form" style="width:500px">
+                    <input type="text" placeholder="Search" id="search2">
+                    <button type="button" id="searchbtn">
+                        <img src="Icons/search-svgrepo-com.svg" width="15px">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <a style="text-decoration: none;" href="AFRICAN/Aux Saveurs de chez nous/Aux Saveurs de chez nous.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Aux Saveurs de chez nous/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Aux
+                            Saveurs de chez nous
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Carrefour Fin goudron Bloc C, Makepe , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 1500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Cafe d'afrique/Cafe D'Afrique.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Cafe d'afrique/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Cafe
+                            d'Afrique
+                        </span>
+                        <p style="font-size: 23px; color: black;">Ancien Aeroport - Près d’Energie Club, Bonapriso,
+                            Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/La Pirogue/La Pirogue.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/La Pirogue/profile.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Pirogue
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Carrefour Deido plage, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Le Baleine blue de massa/La Baleine blue de massa.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Le Baleine blue de massa/Profile.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Baleine blue de massa
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Base Navale de Douala, à 50m du Marché Poisson ,
+                            Bonanjo, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Le Goût d’AfriQ/Le Gout D'Afrique.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Le Goût d’AfriQ/profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Le
+                            Gout D'Afrique
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Carrefour des Immeubles Kotto (en face entrée College
+                            Pilote), Kotto, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BEVERAGES/Be Bop/Be bop.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BEVERAGES/Be Bop/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Be
+                            bop
+                        </span>
+                        <p style="font-size: 23px; color: black;">Rue Tokoto,
+                            angle Rue Entrée Casino, Bonapriso , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BEVERAGES/Fun center/Fun center.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BEVERAGES/Fun center/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Fun
+                            Center
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            Rue des pavés, Bonapriso , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BEVERAGES/La Creperie/images/La creperie.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BEVERAGES/La Creperie/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Crêperie
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            Rue Casino, Bonapriso</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BEVERAGES/Les Perroquets/images/Les Perrroquet.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BEVERAGES/Les Perroquets/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Les
+                            Perroquet
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            165 Rue Ngosso Din, Bali , Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 6000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BEVERAGES/Xania laundry/images/Xania Laundry Cafe.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BEVERAGES/Xania laundry/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Xania
+                            Laundry Cafe
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            Bloc L Makepe, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BREAKFAST/237 street lounge/images/237 Street Lounge.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BREAKFAST/237 street lounge/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">237
+                            Street Lounge
+                        </span>
+                        <p style="font-size: 23px; color: black;">Rue Tokoto,
+                            Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 6000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BREAKFAST/L'atelier Francine/images/L'Atelier Francine.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BREAKFAST/L'atelier Francine/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">L'Atelier
+                            Francine
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Bonamoussadi, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BREAKFAST/Le Fouquet/images/Le Fouquet.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BREAKFAST/Le Fouquet/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Le
+                            Fouquet
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Franqueville, à coté du Glacier Moderne, Akwa</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BREAKFAST/Lynk garden/images/Lynk garden.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BREAKFAST/Lynk garden/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Lynk
+                            Resturant
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 8000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="BREAKFAST/Stardust cafe/images/Stardust cafe.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="BREAKFAST/Stardust cafe/images/profile 5.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Stardust
+                            Coffee
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DESSERT/Creative cake/images/Creative.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DESSERT/Creative cake/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Creative
+                            Cake
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Savio Primaire, Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DESSERT/Glacier Moderne/images/Glacier morderne.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DESSERT/Glacier Moderne/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Glacier
+                            morderne
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté, Akwa , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DESSERT/Maison H/images/Maison H.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DESSERT/Maison H/images/Profile.JPG">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Maison
+                            H
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            165 Rue Ngosso Din, Bali , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DESSERT/My Sweetea/images/My sweetea.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DESSERT/My Sweetea/images/Profile.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">My
+                            SweeTea
+                        </span>
+                        <p style="font-size: 23px; color: black;"> en face Centre Spirituel Jésuite, Tradex Bonamoussadi
+                            , Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DESSERT/Nice Cream/images/Nice cream.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DESSERT/Nice Cream/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Nice
+                            Cream
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Boué De
+                            Lapeyrère, Akwa (en face Drugstore), Akwa, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 1500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Friends food/Friends food.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Friends food/profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Friends
+                            Food
+                        </span>
+                        <p style="font-size: 23px; color: black;"> En face Station Neptune, Bonamoussadi Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Le Baleine blue de massa/La Baleine Blue de Massa.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Le Baleine blue de massa/2.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Baleine blue de massa
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Base Navale de Douala, à 50m du Marché Poisson ,
+                            Bonanjo, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/O Mulatako/Ô Mulatako.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/O Mulatako/profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Ô
+                            Mulatako
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Derrière Total Bonateki, Deïdo, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Opiom/Opiom.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Opiom/profile.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Opiom
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté Akwa I, Akwa, Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Saga Africa/Saga Africa.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Saga Africa/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Saga
+                            Africa
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté Akwa I, Akwa, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Ze Barbek/Ze Barbek.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Ze Barbek/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Ze
+                            Barbek
+                        </span>
+                        <p style="font-size: 23px; color: black;"> En face école publique Bonamoussadi, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+       
+        <a style="text-decoration: none;" href="FOREIGN/A La Broche/images/La Broche.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="FOREIGN/A La Broche/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Broche
+                        </span>
+                        <p style="font-size: 23px; color: black;"> À 200m de la sortie du Supermarché Casino, près du
+                            Collège IPN, Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 8500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="FOREIGN/Le Foyer du marin/images/Le Foyer.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="FOREIGN/Le Foyer du marin/images/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Le
+                            Foyer
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Alfred Saker (Derrière Papeterie Nono) Akwa,
+                            Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/O Mulatako/Ô Mulatako.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/O Mulatako/profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La
+                            Mediterrane
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté (En face Akwa Palace), Akwa,
+                            Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 7500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Opiom/Opiom.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Opiom/profile.jpg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Opiom
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté Akwa I, Akwa, Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Saga Africa/Saga Africa.html">
+            <div class="restaurants_page_box_list1">
+                <div class="container">
+                    <img class=" image1" src="DINNER/Saga Africa/Profile.jpeg">
+                    <div class="text">
+                        <span
+                            style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Saga
+                            Africa
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Boulevard de la Liberté Akwa I, Akwa, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Aux Saveurs de chez nous/Aux Saveurs de chez nous.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Aux Saveurs de chez nous/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Aux
+                            Saveurs de chez nous
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Carrefour Fin goudron Bloc C, Makepe , Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 1500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Cafe d'afrique/Cafe D'Afrique.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Cafe d'afrique/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Cafe d'Afrique
+                        </span>
+                        <p style="font-size: 23px; color: black;">Ancien Aeroport - Près d’Energie Club, Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/La Pirogue/La Pirogue.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/La Pirogue/profile.jpg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La Pirogue
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Carrefour Deido plage, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 3500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="AFRICAN/Le Baleine blue de massa/La Baleine blue de massa.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="AFRICAN/Le Baleine blue de massa/Profile.jpg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">La Baleine blue de massa
+                        </span>
+                        <p style="font-size: 23px; color: black;">  Base Navale de Douala, à 50m du Marché Poisson , Bonanjo, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LOCAL/Loick Food/Loick Food.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LOCAL/Loick Food/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Loick Food
+                        </span>
+                        <p style="font-size: 23px; color: black;">  En face Santa Lucia, Bonamoussadi (Bijoux), Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Bombay Masala/images/Bombay Masala.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Bombay Masala/images/Profile.JPG">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Bombay Masala Restaurant
+                        </span>
+                        <p style="font-size: 23px; color: black;"> 1163 Rue Njo-Njo Bonapriso Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 15000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Les Mangroves/images/Les Mangroves.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Les Mangroves/images/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Les Mangroves
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Base Navale de Douala Bonanjo Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 7000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Les Paletuviers Matanda/Les Paletuviers de Matanda.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Les Paletuviers Matanda/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Les Paletuviers Matanda
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Bonassama, Bonaberi, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Les Perroquets/images/Les Perrroquet.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Les Perroquets/images/Profile.JPG">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Les Perroquet
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Rue Tokoto,
+                            165 Rue Ngosso Din, Bali , Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 6000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Oasis Cave/images/Oasis Cave.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Oasis Cave/images/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Oasis Cave
+                        </span>
+                        <p style="font-size: 23px; color: black;">  Base Navale de Douala Bonanjo Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="WINE/Clavio/images/Clavio.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="WINE/Clavio/images/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Clavio
+                        </span>
+                        <p style="font-size: 23px; color: black;"> Base Navale de Douala Bonanjo Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 5000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="WINE/Mama mia/images/Mama Mia.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="WINE/Mama mia/images/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Mama Mia
+                        </span>
+                        <p style="font-size: 23px; color: black;">  1233 Rue Casino (entrée), Bonapriso, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4500</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="WINE/Murano Lounge/images/Murano.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="WINE/Murano Lounge/images/Profile.JPG">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Murano
+                        </span>
+                        <p style="font-size: 23px; color: black;"> 213 Rue Boué De Lapeyrère, Akwa I, Akwa, Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 8000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="DINNER/Opiom/Opiom.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="DINNER/Opiom/profile.jpg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Opiom
+                        </span>
+                        <p style="font-size: 23px; color: black;">  Boulevard de la Liberté Akwa I, Akwa, Douala </p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 2000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+        <a style="text-decoration: none;" href="LUNCH/Oasis Cave/images/Oasis Cave.html">
+            <div class="restaurants_page_box_list1"> 
+                <div class="container">
+                    <img class=" image1" src="LUNCH/Oasis Cave/images/Profile.jpeg">
+                    <div class="text">
+                        <span style="font-size: 34px; font-weight: bold;  color: teal; font-family: 'Montserrat', sans-serif;;">Oasis Cave
+                        </span>
+                        <p style="font-size: 23px; color: black;">  Base Navale de Douala Bonanjo Douala</p>
+                        <p style="font-size: 15px; color: black;">Average price: FCFA 4000</p>
+                    </div>
+                </div>
+                <hr class="apna_hr1" style="color: teal;">
+            </div>
+        </a>
+    </main>
+</body>
+<footer>
+    <section class="footer">
+        <span class="contact-footer">Contact Us</span><br><br><br>
+        <div class="footer-div">
+            <a href=""><img src="Icons/instagram-2-1-logo-svgrepo-com.svg" class="social-media" alt="instagram-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/facebook-svgrepo-com.svg" class="social-media" alt="facebook-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/twitter-svgrepo-com.svg" class="social-media2" alt="twitter-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/gmail-svgrepo-com.svg" class="social-media" alt="gmail-logo" width="40px"></a>
+        </div><br>
+        <span class="copywrite">copywrite &copy 2022 Taste.com</span>
+    </section>
+</footer>
+
+</html>

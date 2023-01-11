@@ -1,0 +1,65 @@
+{
+	"folders": [
+		{
+			"name": "Le Fouquet",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BREAKFAST/Le Fouquet"
+		},
+		{
+			"name": "237 street lounge",
+			"path": "."
+		},
+		{
+			"name": "Stardust cafe",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BREAKFAST/Stardust cafe"
+		},
+		{
+			"name": "L'atelier Francine",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BREAKFAST/L'atelier Francine"
+		},
+		{
+			"name": "La Creperie",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BEVERAGES/La Creperie"
+		},
+		{
+			"name": "Lynk garden",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BREAKFAST/Lynk garden"
+		},
+		{
+			"name": "BREAKFAST",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BREAKFAST"
+		},
+		{
+			"name": "Fun center",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BEVERAGES/Fun center"
+		},
+		{
+			"name": "BEVERAGES",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BEVERAGES"
+		},
+		{
+			"name": "Be Bop",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/BEVERAGES/Be Bop"
+		},
+		{
+			"name": "WINE",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/WINE"
+		},
+		{
+			"name": "Clavio",
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/WINE/Clavio"
+		},
+		{
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/DESSERT"
+		},
+		{
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/LUNCH"
+		},
+		{
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/DINNER"
+		},
+		{
+			"path": "/Users/sevenacademy/Desktop/RESTAURANTS/FOREIGN"
+		}
+	],
+	"settings": {}
+}

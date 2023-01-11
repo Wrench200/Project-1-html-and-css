@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aux Saveurs de chez nous</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        /*basic css reset*/
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 10px;
+            /*font family*/
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url('homepage images/Background-body.png');
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+
+        }
+
+        /*header*/
+        img.logo {
+            border-radius: 5%;
+            background-color: rgb(237, 211, 130);
+        }
+
+        .header-section {
+            background-color:teal;
+            width: 100vw;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .navbar {
+            width: 85%;
+            margin: auto;
+            padding: 15px;
+            padding-left: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar a.navlink {
+            width: 20%;
+            border-radius: 8px;
+            background-color:teal;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .navbar a.navlink:hover {
+            background-color: rgb(237, 211, 130);
+            color: black;
+            transition: 0.1s ease-in;
+            cursor: pointer;
+        }
+
+
+        form.header-form input[type=text] {
+            padding: 7px;
+            font-size: 15px;
+            border: 3px solid #282A35;
+            border-radius: 10px;
+            width: 50%;
+            background: white;
+            outline: 0;
+
+        }
+
+
+        form.header-form button {
+            border-radius: 10px;
+            width: 35px;
+            padding: 7px;
+            background: white;
+            color: white;
+            font-size: 10px;
+            border: 3px solid #282A35;
+            cursor: pointer;
+
+        }
+
+        form.header-form button:hover {
+            background-color: rgb(237, 211, 130);
+        }
+
+        /*header*/
+
+        /*footer*/
+        section.footer {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background-color:teal;
+        }
+
+        div.footer-div {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: auto auto auto auto;
+            gap: 60px;
+        }
+
+        fieldset.info p {
+            font-size: 1rem;
+        }
+
+        fieldset.info p li {
+            font-size: 5px;
+        }
+
+        .contact-footer {
+            font-size: x-large;
+            font-style: normal;
+            color: whitesmoke;
+            margin-bottom: 2;
+            text-decoration: underline;
+            color: white;
+            text-transform: uppercase;
+
+
+        }
+
+        .copywrite {
+            font-size: large;
+            color: whitesmoke;
+        }
+
+        .social-media {
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media:hover {
+            background-color: rgb(233, 196, 106);
+            transition: 0.1s ease-in;
+            cursor: pointer;
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media2 {
+            border-radius: 7%;
+            padding: 5px;
+        }
+
+        .social-media2:hover {
+            background-color: rgb(233, 196, 106);
+            transition: 0.1s ease-in;
+            cursor: pointer;
+            border-radius: 60%;
+            padding: 5px;
+        }
+
+        /*Footer*/
+
+        div.polaroid {
+            width: 60%;
+            position: relative;
+            left: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 25px;
+            font-family: 'Fira Sans', sans-serif;
+            text-decoration: none;
+        }
+
+        div.container {
+            padding: 10px 20px;
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        div.top-c {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            font-size: 2rem;
+        }
+
+        section.info {
+            position: relative;
+            left: 60rem;
+            bottom: 30rem;
+        }
+
+        main {
+            margin: px;
+            display: grid;
+            column-gap: 10px;
+            grid-template-columns: auto auto;
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-section">
+        <div class="navbar">
+            <a href="/Project-1/Landing-page.html"><img src="Icons/TAST.svg" class="logo" alt="logo" width="50px"></a>
+               <a class="navlink" href="/Landing-page.html">Home</a>
+            <a class="navlink" href="  /All Restaurants.html">All Restaurants</a>
+            <form class="header-form" style="width:500px">
+                <input type="text" placeholder="Search" id="search2">
+                <button type="button" id="searchbtn">
+                    <img src="Icons/search-svgrepo-com.svg" width="15px">
+                </button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <fieldset style="border: 0;">
+            <img src="Profile.jpeg" alt="Aux Saveurs de chez nous" width="100%">
+        </fieldset>
+        <fieldset class="info"
+            style="background-color:teal; color: antiquewhite; font-size: 1rem; border: 0;">
+            <p style="font-size: 3rem ; color:rgb(237,211,130);">Aux Saveurs de chez nous </p>
+            <p><img src="Icons/location-filled-svgrepo-com.svg" width="20px" style="color: antiquewhite;">  Carrefour Fin goudron Bloc C, Makepe , Douala</p>
+            <p>
+                <li>African</li>
+                <li>Cameroonian</li> 
+            </p>
+            <p>Average price: FCFA 1500</p>
+            <p></p>
+            <p><img src="Icons/phone-svgrepo-com.svg" width="20px"><a style="text-decoration: none;color: rgb(237, 211, 130);" href="tel:+237 699 984 073  ">+237 699 984 073  </a></p>
+            <p><img src="Icons/phone-svgrepo-com.svg" width="20px"><a style="text-decoration: none;color: rgb(237, 211, 130);" href="tel:+237 672 440 220  ">+237 672 440 220  </a></p>
+            </span>
+        </fieldset>
+
+
+    </main>
+    <div style="font-size: 2rem; position: relative; left: 40rem;">MENU</div>
+    <fieldset style="background-color:teal;">
+       <a href="Pic 1.jpeg"> <img src="Pic 1.jpeg" class="" alt="menu" width="100px"></a>
+       <a href="Pic 2.jpeg"> <img src="Pic 2.jpeg" class="" alt="menu" width="100px"></a>
+       
+    </fieldset><br><br><br><br>
+</body>
+<footer>
+    <section class="footer">
+        <span class="contact-footer">Contact Us</span><br><br><br>
+        <div class="footer-div">
+            <a href=""><img src="Icons/instagram-2-1-logo-svgrepo-com.svg" class="social-media" alt="instagram-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/facebook-svgrepo-com.svg" class="social-media" alt="facebook-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/twitter-svgrepo-com.svg" class="social-media2" alt="twitter-logo"
+                    width="40px"></a>
+            <a href=""><img src="Icons/gmail-svgrepo-com.svg" class="social-media" alt="gmail-logo" width="40px"></a>
+        </div><br>
+        <span class="copywrite">copywrite &copy 2022 Taste.com</span>
+    </section>
+</footer>
+
+</html>
